@@ -1,5 +1,5 @@
 import { Component, OnInit,Input } from '@angular/core';
-import { League } from './../league-table-frame/league';
+import { League } from '../league-table-dialog/league';
 
 @Component({
   selector: 'app-league-table-body',
@@ -7,7 +7,7 @@ import { League } from './../league-table-frame/league';
   styleUrls: ['./league-table-body.component.css']
 })
 export class LeagueTableBodyComponent implements OnInit {
-  @Input()league:League;
+  @Input()leagues:League[];
 
 
   constructor() { }

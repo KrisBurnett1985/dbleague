@@ -15,11 +15,14 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { AngularFireModule } from '@angular/fire';
 import { environment } from './../environments/environment';
+import { AngularFireAuthModule } from '@angular/fire/auth';
+
+
 
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
-import { FirebaseUIModule } from 'firebaseui-angular';
+import { FirebaseUIModule,firebase } from 'firebaseui-angular';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 //components
@@ -30,6 +33,16 @@ import { LeagueTableFrameComponent } from './leagueTable/league-table-frame/leag
 import { LeagueTableDialogComponent } from './leagueTable/league-table-dialog/league-table-dialog.component';
 import { LeagueTableBodyComponent } from './leagueTable/league-table-body/league-table-body.component';
 import { MatTableModule } from '@angular/material/table';
+
+const firebaseUIConfig= {
+  signInFlow:'popup',
+  singInOptions: [
+    firebase.auth.GoogleAuthProvider.PROVIDER_ID,
+    firebase.auth.EmailAuthProvider.PROVIDER_ID
+  ],
+  privacyPolicyUrl: 'https://www.iubenda.com/privacy-policy/64696699'
+};
+
 
 @NgModule({
   declarations: [
@@ -45,7 +58,9 @@ import { MatTableModule } from '@angular/material/table';
 //fire
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFirestoreModule,
-    FirebaseUIModule,
+    FirebaseUIModule.forRoot(firebaseUIConfig),
+    AngularFireAuthModule,
+    AngularFireModule,
     //standard
     BrowserModule,
     BrowserAnimationsModule,

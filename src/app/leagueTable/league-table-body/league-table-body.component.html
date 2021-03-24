@@ -1,6 +1,23 @@
 
-            <td scope="row">{{league?.Name}}</td>
-            <td  scope="row">{{league?.Race}}</td>
+      <table class="mdc-data-table__table" aria-label="leagues"  >
+
+        <thead>
+          <tr >
+            <th  role="columnheader" scope="col">Name</th>
+            <th  role="columnheader" scope="col">Race</th>
+            <th  role="columnheader" scope="col">Win</th>
+            <th  role="columnheader" scope="col">Loss</th>
+            <th  role="columnheader" scope="col">Draw</th>
+            <th  role="columnheader" scope="col">VP</th>
+
+            <th  role="columnheader" scope="col">edit</th>
+            <th  role="columnheader" scope="col">del</th>
+
+        </tr>
+        </thead>
+      <tr *ngFor="let league of leagues|async">
+            <td >{{league?.Name}}</td>
+            <td >{{league?.Race}}</td>
             <td >{{league?.Win}}</td>
             <td >{{league?.Loss}}</td>
             <td >{{league?.Draw}}</td>
@@ -16,5 +33,7 @@
                 <mat-icon>delete</mat-icon>
             </button>
             </td>
+        </tr>
+    </table>
+    
 
-          

@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import * as firebaseui from 'firebaseui';
+
 
 @Component({
   selector: 'app-fixture-frame',
@@ -6,6 +8,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./fixture-frame.component.css']
 })
 export class FixtureFrameComponent implements OnInit {
+  ui:firebaseui.auth.AuthUI;
+  loggedin(event){
+    console.log(event);
+  }
 
   constructor() { }
 

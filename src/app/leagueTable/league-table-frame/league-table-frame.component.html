@@ -1,36 +1,14 @@
-<p>league-table-body works!</p>
 <div class="middle">
-<mat-card class="mat-elevation-z8">
-    <mat-card-header>
-        <h1>Dad Bat Army 40k League</h1>
-    </mat-card-header>
-    <mat-card-content>
-
-      <table class="mdc-data-table__table" aria-label="leagues"  >
-
-        <thead>
-          <tr >
-            <th  role="columnheader" scope="col">Name</th>
-            <th  role="columnheader" scope="col">Race</th>
-            <th  role="columnheader" scope="col">Win</th>
-            <th  role="columnheader" scope="col">Loss</th>
-            <th  role="columnheader" scope="col">Draw</th>
-            <th  role="columnheader" scope="col">VP</th>
-
-            <th  role="columnheader" scope="col">edit</th>
-            <th  role="columnheader" scope="col">del</th>
-
-        </tr>
-        </thead>
-<tbody>
-  <tr >
-    <app-league-table-body *ngFor="let league of leagues|async" [league]="league"></app-league-table-body>
-  </tr>
-</tbody>
-
+  <mat-card class="mat-elevation-z8">
+      <mat-card-header>
+          <h1>Dad Bat Army 40k League</h1>
+      </mat-card-header>
+      <mat-card-content>
+  
+    <app-league-table-body  [leagues]="leagues"></app-league-table-body>
         
-</table>
-</mat-card-content>
+    
+  </mat-card-content>
   <mat-card-content>
 
   <button class="right" mat-raised-button color="primary">

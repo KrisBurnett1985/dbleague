@@ -3,6 +3,9 @@ table, th, td {
     border-collapse: collapse;
 }
 
+tr:hover {
+    background-color: #ddd;
+}
 
 th{
     padding: 12px;
@@ -16,8 +19,27 @@ td{
     padding-left: 5px;
 }
 
+table{
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    min-width: 100%;  
+    
+}
 
+.right{
+    float:right;
+}
 
+.middle{
+    display: flex;
+    justify-content: center;
+    min-width: 80%;
+
+}
+
+mat-card{
+    width: 80%;
+}
 
 .button{
     border-radius:50%;

@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
 import { AngularFirestore, AngularFirestoreCollection } from '@angular/fire/firestore';
-import { League } from './league';
+import { League } from '../league-table-dialog/league';
+import * as firebaseui from 'firebaseui';
+
 
 const getObservable = (collection:AngularFirestoreCollection<League>)=>{
   const subject=new BehaviorSubject([]);
@@ -16,6 +18,11 @@ const getObservable = (collection:AngularFirestoreCollection<League>)=>{
   styleUrls: ['./league-table-frame.component.css']
 })
 export class LeagueTableFrameComponent implements OnInit {
+  ui:firebaseui.auth.AuthUI;
+  loggedIn(event){
+    console.log(event);
+  }
+
 
   leagues= this.store.collection('League').valueChanges({ifField:'id'});
 
