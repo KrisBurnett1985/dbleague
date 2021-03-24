@@ -1,0 +1,51 @@
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+tr:hover {
+    background-color: #ddd;
+}
+
+th{
+    padding: 12px;
+    text-align: left;
+    background-color: rgb(35, 53, 223);
+    color: rgb(255, 255, 255);
+    text-shadow: 2px 2px #414141;
+}
+
+td{
+    padding-left: 5px;
+}
+
+table{
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    min-width: 100%;  
+    
+}
+
+.right{
+    float:right;
+}
+
+.middle{
+    display: flex;
+    justify-content: center;
+    min-width: 80%;
+
+}
+
+mat-card{
+    width: 80%;
+}
+
+.button{
+    border-radius:50%;
+}
+.button_container{
+    text-align: center;
+    padding:5px;
+
+}

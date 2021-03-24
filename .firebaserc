@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "kleague-5daef": {
+      "hosting": {
+        "dbleague": [
+          "kleague-5daef"
+        ]
+      }
+    }
+  }
+}
